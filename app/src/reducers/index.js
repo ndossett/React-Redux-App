@@ -19,6 +19,11 @@ export const reducer = (state = initialState, action) => {
                 cards: action.payload,
                 isFetching:false,
             })
+        case(FETCH_CARDS_FAIL):
+            return({
+                ...state,
+                error: action.payload
+            })
         default:
             return state;
     }

@@ -15,7 +15,6 @@ export const getCards = (selectors) => dispatch => {
             payload: res.data.cards})
         })
         .catch(err => {
-            console.log(err.message)
             dispatch({ type: FETCH_CARDS_FAIL,
             payload: err})
         })
